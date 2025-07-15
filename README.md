@@ -345,14 +345,6 @@ CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
 - Add authentication for sensitive operations
 - Monitor for unusual activity
 
-## Contributing
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ### Code Style
 - Follow PEP 8 guidelines
@@ -386,7 +378,6 @@ For issues and questions:
 3. Create a new issue with detailed information
 4. Include system information and error logs
 
-## Changelog
 
 ### Version 1.0.0
 - Initial release
@@ -399,4 +390,4 @@ For issues and questions:
 ---
 
 **Note**: This tool processes audio and video files using cloud-based AI services. Ensure you comply with your organization's data privacy policies and terms of service for all integrated APIs.
-"""
+
