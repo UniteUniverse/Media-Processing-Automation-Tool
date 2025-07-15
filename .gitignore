@@ -1,0 +1,13 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Environments
+.venv/
+.env
+# Runtime outputs
+processed/
+automation.log
+
+# OS
+.DS_Store

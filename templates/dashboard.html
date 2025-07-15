@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="notifications"></div>
+
+<h2>Configuration</h2>
+<form id="config-form" class="row g-3 mb-4">
+  <div class="col-md-4">
+    <label for="language" class="form-label">Language Preference</label>
+    <select id="language" class="form-select">
+      <option value="auto" selected>Auto-detect</option>
+      <option value="en">English</option>
+      <option value="ta">Tamil</option>
+      <option value="hi">Hindi</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="speakers" class="form-label">Number of Speakers</label>
+    <input type="number" id="speakers" class="form-control" min="1" max="10">
+  </div>
+</form>
+
+<h2>Folder Monitor</h2>
+<div class="row mb-4">
+  <div class="col-md-8">
+    <input type="text" id="folder-path" class="form-control"
+           placeholder="Path to watch (absolute or relative)">
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-outline-primary w-100" id="start-btn">Start Monitoring</button>
+  </div>
+</div>
+
+<h2>Manual Upload</h2>
+<form id="upload-form" enctype="multipart/form-data" class="mb-4">
+  <div class="row">
+    <div class="col-md-8">
+      <input class="form-control" type="file" name="file" accept="audio/*,video/*" required>
+    </div>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-primary w-100">Upload File</button>
+    </div>
+  </div>
+</form>
+
+<h2>Processing Results</h2>
+<div class="table-responsive">
+  <table class="table table-striped" id="results-table">
+    <thead>
+      <tr>
+        <th width="5%">#</th>
+        <th width="40%">File</th>
+        <th width="30%">Status</th>
+        <th width="25%">Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic content will be inserted here -->
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
